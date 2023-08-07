@@ -1,0 +1,17 @@
+clc;
+clear;
+
+load diabetes.mat
+
+figure;
+hold on;
+for i=1:size(labels_test1), 1)
+    if labels_test(i,1)==1
+        parallelcoords(testset(i,:),'color','r')
+    else
+        parallelcoords(testset(i,:),'color','b')
+    end
+end
+axis([1,8, 1,850])
+
+hold off;
